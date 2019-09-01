@@ -1,0 +1,28 @@
+<div class="header">
+    <h4 class="title text-center">Listagem de repositórios publicos do github</h4>
+</div>
+
+<div class="row content-margin">
+  <div class="col-6">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Digite o nome de algum repositório" [(ngModel)]="textSearch" (ngModelChange)="onSearchRepositories()" >
+    </div>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <thead class="thead-dark ">
+    <tr>
+      <th scope="col" class="w-30">Owner Avatar</th>
+      <th scope="col" class="w-30">Owner</th>
+      <th scope="col" class="w-20">Repository Name</th>
+      <th scope="col" class="w-20">Full Name Repository</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let repo of service.list">
+    <td><img src="{{repo.owner.avatar_url}}" class="align-middle avatar-icon" style="border-radius: 50%; height:50px; width: 50px" /></td>
+    <td>{{repo.name}}</td>
+    <td>{{repo.full_name}}</td>
+    <td>{{repo.owner.login}}</td>
+  </tr>
+</table>

@@ -24,24 +24,28 @@ export class RepositoryService {
     this._baseGitHubUrl = config.API_GITHUB_URL;
   }
 
+  //List all repositories
   getAllRepositories() {
     this.http.get(this._baseGitHubUrl + '/repositories')
       .toPromise()
       .then(res => this.list = res as Repository[]);
   }
 
+  //List all repositories filtering by text
   getAllRepositoriesByText(text: string) {
     this.http.get(`${this._baseGitHubUrl}/search/repositories?q=${text}`)
       .toPromise()
       .then((res: RepositorySearch) => { this.list = res.items as Repository[]});
   }
 
+  //List all repositories by user
   getRepositoryByUser(user: string) {
     this.http.get(`${this._baseGitHubUrl}/users/${user}/repos`)
       .toPromise()
       .then(res => this.list = res as Repository[]);
   }
 
+  //Get detail of some repository
   getRepository(username: string, repository: string) : Observable<Repository>{
     return this.http.get<Repository>(`${this._baseGitHubUrl}/repos/${username}/${repository}`);
   }

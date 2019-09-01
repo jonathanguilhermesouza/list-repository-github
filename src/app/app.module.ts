@@ -10,16 +10,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
-import { RepositoryPublicComponent } from './components/repository/public/repository-public.component';
-import { RepositoryPrivateComponent } from './components/repository/private/repository-private.component';
+import { RepositoryAllComponent } from './components/repository/repository-all/repository-all.component';
+import { RepositoryIndividualComponent } from './components/repository/repository-individual/repository-individual.component';
+import { RepositoryListComponent } from './components/repository/repository-list/repository-list.component';
+import { RepositoryDetailComponent } from './components/repository/repository-detail/repository-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    RepositoryPublicComponent,
-    RepositoryPrivateComponent
+    RepositoryAllComponent,
+    RepositoryIndividualComponent,
+    RepositoryListComponent,
+    RepositoryDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,8 +33,9 @@ import { RepositoryPrivateComponent } from './components/repository/private/repo
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent},
-      { path: 'repository-public', component: RepositoryPublicComponent },
-      { path: 'repository-private', component: RepositoryPrivateComponent}
+      { path: 'repository-all', component: RepositoryAllComponent },
+      { path: 'repository-individual', component: RepositoryIndividualComponent},
+      { path: 'repository-detail', component: RepositoryDetailComponent}
     ]),
     ToastrModule.forRoot()
   ],

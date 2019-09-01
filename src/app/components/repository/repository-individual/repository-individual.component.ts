@@ -3,18 +3,15 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { ToastrService } from 'ngx-toastr';
 
-//models
-import { Repository } from 'src/app/components/repository/shared/repository.model';
-
 //services
 import { RepositoryService } from 'src/app/components/repository/shared/repository.service';
 
 @Component({
-  selector: 'repository-private',
-  templateUrl: './repository-private.component.html',
-  styleUrls: ['./repository-private.component.css']
+  selector: 'repository-individual',
+  templateUrl: './repository-individual.component.html',
+  styleUrls: ['./repository-individual.component.css']
 })
-export class RepositoryPrivateComponent implements OnInit {
+export class RepositoryIndividualComponent implements OnInit {
 
   textSearch: string;
 

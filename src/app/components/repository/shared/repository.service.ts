@@ -1,6 +1,7 @@
 //packages
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
 
 //global variables
 import { GlobalConfig } from 'src/app/config';
@@ -16,7 +17,6 @@ export class RepositoryService {
   list: Repository[];
   search: RepositorySearch;
   private _baseGitHubUrl = '';
-  private _userGithub = '';
 
   constructor(
     private http: HttpClient,
@@ -41,4 +41,10 @@ export class RepositoryService {
       .toPromise()
       .then(res => this.list = res as Repository[]);
   }
+
+  getRepository(username: string, repository: string) : Observable<Repository>{
+    return this.http.get<Repository>(`${this._baseGitHubUrl}/repos/${username}/${repository}`);
+  }
+
+
 }

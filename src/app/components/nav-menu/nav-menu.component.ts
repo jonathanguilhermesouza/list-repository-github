@@ -16,12 +16,6 @@ export class NavMenuComponent {
     ) { }
 
   ngOnInit() {
-    this.checkIfUserIsAuthenticated();
-  }
-
-  checkIfUserIsAuthenticated() {
-    if(localStorage.getItem('token') != null)
-      this.config.IS_AUTHENTICATED = true;
   }
 
   collapse() {
@@ -30,11 +24,5 @@ export class NavMenuComponent {
 
   toggle() {
     this.isExpanded = !this.isExpanded;
-  }
-
-  onLogout(){
-    this.config.IS_AUTHENTICATED = false;
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
   }
 }

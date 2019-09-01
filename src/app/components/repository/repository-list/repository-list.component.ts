@@ -1,7 +1,6 @@
 //packages
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationExtras } from "@angular/router";
-import { ToastrService } from 'ngx-toastr';
 
 //models
 import { Repository } from 'src/app/components/repository/shared/repository.model';

@@ -1,7 +1,5 @@
-# CaptaTecnologia
+# Listagem de repositórios do GitHub
 Este projeto foi desenvolvido em Angular 7, seu objetivo é listar repositórios do github;
-
-![Homepage WeatherNow](https://i.ibb.co/ftMgg60/image.png)
 
 ## Como o app funciona?
 Ao rodar o projeto é possível navegar em até 4 telas, home, tela que lista todos repositórios do github e também filtra conforme texto digitado no campo de busca, tela que lista todos repositórios de determinado usuário e a tela que trás os detalhes do repositório indivisualmente.

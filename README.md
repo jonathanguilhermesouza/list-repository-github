@@ -16,9 +16,13 @@ Ao rodar o projeto é possível navegar em até 4 telas, home, tela que lista to
 1. Baixe o projeto em seu computador.
 2. Navegue até a pasta raiz e abra utilizando o VS Code ou qualquer outra ferramenta de sua preferência.
 >
-![Tela inicial](https://i.ibb.co/G558drW/image.png)
+![Tela inicial](https://i.ibb.co/4sqhqyr/image.png)
 >
-3. Execute o comando ng serve
+3. Execute o comando npm install para instalar todas as dependências do projeto.
+>
+![Npm install](https://i.ibb.co/brT2LdR/image.png)
+>
+4. Execute o comando ng serve
 >
 ![Executando o projeto](https://i.ibb.co/4s6D2BP/image.png)
 >
